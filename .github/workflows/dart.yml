@@ -14,7 +14,7 @@ jobs:
         with:
           channel: 'stable'
           architecture: x64
-      - run: flutter --no-cli-animations
+      - run: flutter get 
       
 
       - run: pod repo update
