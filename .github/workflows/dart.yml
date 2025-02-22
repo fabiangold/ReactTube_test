@@ -20,7 +20,7 @@ jobs:
       - run: pod repo update
         working-directory: ios
 
-      - run: flutter build ios --release --no-codesign flutter config --no-cli-animations
+      - run: flutter build ios --release --no-codesign flutter --no-cli-animations
 
       - run: mkdir Payload
         working-directory: build/ios/iphoneos
