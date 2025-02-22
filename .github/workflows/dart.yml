@@ -14,13 +14,13 @@ jobs:
         with:
           channel: 'stable'
           architecture: x64
-      - run: flutter pub get
+      - run: flutter --no-cli-animations
       
 
       - run: pod repo update
         working-directory: ios
 
-      - run: flutter build ios --release --no-codesign flutter --no-cli-animations
+      - run: flutter build ios --release --no-codesign 
 
       - run: mkdir Payload
         working-directory: build/ios/iphoneos
